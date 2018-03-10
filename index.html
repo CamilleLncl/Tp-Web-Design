@@ -1,29 +1,31 @@
-
-
 <!DOCTYPE html>
-<html ng-app="store">
-<head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<meta http-equiv="Content-TYpe" content="text/html" charset="utf-8">
-  <title>La Carte</title>
-     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <script type="text/javascript" src="./vendor/angular/angular.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" type="text/css" href="./css/style.css"/>
-      <link href=" file:///Users/camillelancelin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<html  ng-app="store">
 
- 
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Café à 1euro dans Paris</title>
+		<script type="text/javascript" src="./vendor/angular/angular.js"> </script>
+		<script type="text/javascript" src="./js/script.js"> </script>
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<link rel="stylesheet" type="text/css" href="./vendor/bootstrap/bootstrap.css" />
+		
+	</head>
 
-<h1>La Carte de Eliane et Camille</h1>
-<body >
-<div id="map"></div>
- <!-- Replace the value of the key parameter with your own API key. -->
-
- <script type="text/javascript" src="./js/script.js"></script>
-</body>
-<!-- //https://www.mapbox.com/mapbox-gl-js/api/ -->
+	<body ng-controller="storeController as storectrl">
+		<div class="row">
+			<div class="col-md-4" ng-click="storectrl.tri('fields.nom_du_cafe')">
+				Nom du café
+			</div><div class="col-md-4">
+			Adresse
+			</div><div class="col-md-4" ng-click="storectrl.tri('fields.arrondissement')">
+			Arrondissement
+			</div>
+		</div>
+		<div class="row" ng-repeat="cafe in storectrl.list|orderBy:storectrl.order_by">
+			<div class="col-md-4">{{cafe.fields.nom_du_cafe}}
+			</div><div class="col-md-4">{{cafe.fields.adresse}}
+			</div><div class="col-md-4">{{cafe.fields.arrondissement}}
+			</div>
+		</div>
+	</body>
 </html>
