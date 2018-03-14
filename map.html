@@ -10,16 +10,16 @@
 		<link rel="stylesheet" type="text/css" href="./vendor/bootstrap/bootstrap.css" />
 		
 	</head>
-
-	<body ng-controller="storeController as storectrl">			
+	
+	<body>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="./index.html">Café à 1euro dans Paris</a>
 				</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="./index.html">List</a></li>
-				<li><a href="./map.html">Map</a></li>
+				<li ><a href="./index.html">List</a></li>
+				<li class="active"><a href="./map.html">Map</a></li>
 			</ul>
 			<form class="navbar-form navbar-left" action="http://www.google.com">
 				<div class="input-group">
@@ -28,30 +28,6 @@
 				</div>				
 			</form></div>
 		</nav>
-		
-		<div class="table-responsive">
-			<table class="table">
-			<thead>
-			<tr>
-			<th class="col-md-4" ng-click="storectrl.tri('fields.nom_du_cafe')">
-				Nom du café
-			</th><th class="col-md-4">
-			Adresse
-			</th><th class="col-md-4" ng-click="storectrl.tri('fields.arrondissement')">
-			Arrondissement
-			</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr ng-repeat="cafe in storectrl.list|orderBy:storectrl.order_by">
-			<td class="col-md-4">{{cafe.fields.nom_du_cafe}}
-			</td><td class="col-md-4">{{cafe.fields.adresse}}
-			</td><td class="col-md-4">{{cafe.fields.arrondissement}}
-			</td>
-		</tr>
-		</tbody>
-		</table>
-		</div>
-		
 	</body>
+
 </html>
