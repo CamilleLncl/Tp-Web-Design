@@ -1462,10 +1462,11 @@
             48.840771,
             2.324589
          ],
-         "nom_du_cafe":"La Brasserie Gait\u00e9",
+         "nom_du_cafe":"La Brasserie Gaite",
          "prix_terasse":"1",
-         "date":"2013-08-22"
-          }
+         "date":"2013-08-22",
+         "prix_comptoir":0
+          
       },
       "geometry":{
          "type":"Point",
@@ -2716,7 +2717,7 @@
          "nom_du_cafe":"La Montagne Sans Genevi\u00e8ve",
          "prix_terasse":"-",
          "date":"2012-10-22"
-      }},
+      },
       "geometry":{
          "type":"Point",
          "coordinates":[
