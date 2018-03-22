@@ -2,9 +2,6 @@
 	angular.module("store",[]);
 })();
 
-
-
-
 (function(){	
 	angular.module("store")
 	.controller("storeController",["$http",function($http){
@@ -25,15 +22,19 @@
 			else _this.order_by=ref_order;
 			
 		};
+		
+		this.selectedTab=1;
+		this.selectTab=function(id){
+			this.selectedTab=id;
+		};
+		
+		this.on_submit=function(){
+			this.list.push(this.cafe);
+			this.cafe={};
+			alert("Votre café a bien été ajouté à la liste !");
+		};
 	
 	}])
 })();
 
-(function(){
-	angular.module("store");
-	
-	
-	
-	var _this=this;
-})();
 

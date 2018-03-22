@@ -6,6 +6,39 @@
   height: 1000px;
   
 }
+
+.tabs_head{
+	border-bottom:solid 1px gray;
+}
+.tabs_head>span{
+	display:inline-block;
+	cursor:pointer;
+	padding:0px 3px;
+	border-right:solid 1px gray;
+	color:black;
+}
+.tabs_head>span.tab_selected{
+	color:white;
+	background-color:#D8A37D;
+}
+.tabs_content>div{
+	display:block;
+	overflow:hidden;
+	max-height:0px;
+}
+.tabs_content>div.tab_selected{
+	max-height:10000px;
+}
+
+/* span{
+	cursor:pointer;
+} */
+
+th{
+	border-top:solid 1px black;
+	cursor:pointer;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
