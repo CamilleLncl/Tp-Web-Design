@@ -7,6 +7,14 @@
   
 }
 
+.container-fluid{
+	background-color:#72CCD8;
+}
+
+.form-control{
+	margin-top: 8px;
+}
+
 .tabs_head{
 	border-bottom:solid 1px gray;
 }
@@ -19,7 +27,7 @@
 }
 .tabs_head>span.tab_selected{
 	color:white;
-	background-color:#D8A37D;
+	background-color:#72CCD8;
 }
 .tabs_content>div{
 	display:block;
@@ -30,9 +38,9 @@
 	max-height:10000px;
 }
 
-/* span{
-	cursor:pointer;
-} */
+form{
+	margin-left:20px;
+}
 
 th{
 	border-top:solid 1px black;
@@ -44,4 +52,5 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
