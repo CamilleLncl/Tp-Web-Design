@@ -27,7 +27,7 @@ map.on('load', function () {
   var popup = new mapboxgl.Popup()
   .setLngLat(feature.geometry.coordinates).addTo(map)
   .setHTML(
-  '</br><b> NOM </b>: ' + feature.properties.nom +
+  '</br><b> NOM </b>: ' + feature.properties.nom_du_cafe +
   '<b> ADRESSE </b>: ' + feature.properties.adresse + 
   '</br><b> ARRONDISSEMENT </b>: ' + feature.properties.arrondissement +
  
