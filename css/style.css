@@ -1,21 +1,75 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-  position:center; 
-  width: 1500px; 
-  height: 1000px;
+  display: block;
+  height: 400px;
+  width: 100%;
+}
+
+/* CSS for responsive iframe */
+/* ========================= */
+
+/* outer wrapper: set max-width & max-height; max-height greater than padding-bottom % will be ineffective and height will = padding-bottom % of max-width */
+
+#Iframe-Map {
+  display: none;
+  max-width: 600px;
+  max-height: 480px; 
+  overflow: hidden;
+}
+
+/* inner wrapper: make responsive */
+.responsive-wrapper {
+  position: relative;
+  height: 0;    /* gets height from padding-bottom */
   
+  /* put following styles (necessary for overflow and scrolling handling on mobile devices) inline in .responsive-wrapper around iframe because not stable in CSS:
+    -webkit-overflow-scrolling: touch; overflow: auto; */
+  
+}
+ 
+.responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* padding-bottom = h/w as % -- sets aspect ratio */
+/* YouTube video aspect ratio */
+.responsive-wrapper-wxh-650x315 {
+  padding-bottom: 56.25%;
+}
+.responsive-wrapper-wxh-600x480 {
+  padding-bottom: 80%;
+}
+
+/* at mobile device sizes suppress Mapbox map which is not mobile friendly and display responsive iframe map instead. */
+@media only screen and (max-width: 736px) {
+  #map {
+    display: none;
+  }
+  #Iframe-Map {
+    display: block;
+  }
 }
 
 .container-fluid{
 	background-color:#72CCD8;
 }
 
+
 .form-control{
 	margin-top: 8px;
 }
 
 .tabs_head{
+	border-top: solid 1px gray;
 	border-bottom:solid 1px gray;
 }
 .tabs_head>span{

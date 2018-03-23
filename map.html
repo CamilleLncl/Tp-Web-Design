@@ -32,23 +32,21 @@
 		</nav>
 
 		<div id='map'> </div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2Ftem91IiwiYSI6ImNqZWExdndrbzB4ZjAyeXBlaDQ3OW1mdDQifQ.xdJ-9cBFVKG0-JC9k2Xthg';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [2.34, 48.86],
-    zoom: 11
-});
-
-
-
-</script>
-
-
-<script type="text/javascript" src="./js/initmap.js"> </script>
-
-
-
+		
+			<div id="Iframe-Map" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+			<div class="responsive-wrapper responsive-wrapper-wxh-600x480" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+			
+			<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiY2Ftem91IiwiYSI6ImNqZWExdndrbzB4ZjAyeXBlaDQ3OW1mdDQifQ.xdJ-9cBFVKG0-JC9k2Xthg';
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/streets-v9',
+				center: [2.34, 48.86],
+				zoom: 11
+			});
+			</script>
+		<script type="text/javascript" src="./js/initmap.js"> </script>
+		</div>
+		</div>
 	</body>
 </html>
